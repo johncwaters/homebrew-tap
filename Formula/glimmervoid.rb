@@ -1,25 +1,25 @@
 class Glimmervoid < Formula
   desc "See it before it's built. Every terminal coding agent shows its prototypes, architecture and plans on a whiteboard you mark up, and works in its own git worktree. Only the one that needs you asks for your attention."
   homepage "https://glimmervoid.dev"
-  version "0.54.0"
+  version "0.54.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.54.0/glimmervoid-aarch64-apple-darwin.tar.xz"
-      sha256 "708454eb7f7bc9decdbfc35022b22cd7044b7c5023a16345248e479b7a305d9b"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.54.1/glimmervoid-aarch64-apple-darwin.tar.xz"
+      sha256 "41db7b42053ab3514d3db7acb92a46b431310791aa652e1ace7e0fbbe77070c4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.54.0/glimmervoid-x86_64-apple-darwin.tar.xz"
-      sha256 "91911a90c0b55db907c440f9c3f84e0de0b5c35657c64585eabd0df02f939813"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.54.1/glimmervoid-x86_64-apple-darwin.tar.xz"
+      sha256 "f2969dd27412bd4430ca933be14b9fab5e064ec9d153185a2d7afb0684b76525"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.54.0/glimmervoid-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ef17fca5029333492956dbb72e138a066a8c6fed0b5cd3dbe5b342a5e7961ec4"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.54.1/glimmervoid-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "aa1a443147204886861126e7000ef6f523c450c1fd14d7f09af651ed2b599522"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.54.0/glimmervoid-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "20a9a090e6192dd5c0296d3f2c3274893cda0db6a983d99e6a7cffb64345d320"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.54.1/glimmervoid-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "89e3a4fdbf417df307599cbcd1106c934bfe7867f4cae029ddcddd2a1cfb35f3"
     end
   end
   license "MIT"
