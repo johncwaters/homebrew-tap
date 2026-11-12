@@ -1,25 +1,25 @@
 class Glimmervoid < Formula
-  desc "See it before it's built. Every terminal coding agent shows its prototypes, architecture and plans on a whiteboard you mark up, and works in its own git worktree. Only the one that needs you asks for your attention."
+  desc "Supervise terminal coding agents on a shared whiteboard"
   homepage "https://glimmervoid.dev"
-  version "0.57.0"
+  version "0.57.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.57.0/glimmervoid-aarch64-apple-darwin.tar.xz"
-      sha256 "0f556a12333c8d499112e31cfb035293876d72f88ccda7037a8d6344a202b937"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.57.1/glimmervoid-aarch64-apple-darwin.tar.xz"
+      sha256 "5e401b3e02033d0f8afd2f6b1ab3232b3db2c13802e760a4dbc10f295ca81d30"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.57.0/glimmervoid-x86_64-apple-darwin.tar.xz"
-      sha256 "87c02382543d8235cfe3fcd3bf6de13ff8d35699ea313d89eb7ac2ac63b9d8c2"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.57.1/glimmervoid-x86_64-apple-darwin.tar.xz"
+      sha256 "bcee0163cd865d3c1b6d06d71b5ef9b0b6de56daebbff06cbfb1edc9db9a6676"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.57.0/glimmervoid-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "50e016c308d561081cd503624ffbdf2db4c229e840c27272cc6907982fbef908"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.57.1/glimmervoid-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4b46276d5b47fdc92e92bdb26391e4df3635471356221b8b3347da8afbb45785"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.57.0/glimmervoid-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ffae01e7d947f32bdf1453ce2d6d8ce425a7fa90c548054fee2fd13a67d976e7"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.57.1/glimmervoid-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "28cecc3cda8dd6a9313cd85faea6996d0296d7cc063c4959e0bea3946b0b3867"
     end
   end
   license "MIT"
@@ -70,5 +70,9 @@ class Glimmervoid < Formula
     # Install any leftover files in pkgshare; these are probably config or
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/glimmervoid --version")
   end
 end
