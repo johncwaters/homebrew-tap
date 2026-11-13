@@ -1,25 +1,25 @@
 class Glimmervoid < Formula
   desc "Supervise terminal coding agents on a shared whiteboard"
   homepage "https://glimmervoid.dev"
-  version "0.57.3"
+  version "0.58.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.57.3/glimmervoid-aarch64-apple-darwin.tar.xz"
-      sha256 "9ada8043b2c12b2d9012a8fa08ef269a1039195f007d9923ffecc8bbc7f4d87a"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.58.0/glimmervoid-aarch64-apple-darwin.tar.xz"
+      sha256 "66df98df0c2c43699d45576705336bac7502d20755d1e54557e9b6f9c0d0e4da"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.57.3/glimmervoid-x86_64-apple-darwin.tar.xz"
-      sha256 "667c5224ffefb34531b9896a90e53ec7a60be41f147e1a08b9ac68d5fba8bde4"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.58.0/glimmervoid-x86_64-apple-darwin.tar.xz"
+      sha256 "32b2025cda898784395d2e8cfb28c9ec61d1237681da26393eeba58584e6ba49"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.57.3/glimmervoid-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a7af52a9198be54ce10d19a400c6db9aaa57247e08add7b8aa95c6ec5837caba"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.58.0/glimmervoid-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f55b60d3ce7165ab8db67a7af9102e7b8aa021b3dbaf56452b17994284b04034"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.57.3/glimmervoid-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "7cf5bdfffa940daff401bc706d84b13f1a1ee71ee2a7ba23b13399e4d9559102"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.58.0/glimmervoid-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8883ad4280ea13181bccfb1b2b1fe622026beb849c30146539bdaddb8cd69e8a"
     end
   end
   license "MIT"
@@ -49,16 +49,16 @@ class Glimmervoid < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "glimmervoid"
+      bin.install "glimmervoid", "glimmervoid-fnox"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "glimmervoid"
+      bin.install "glimmervoid", "glimmervoid-fnox"
     end
     if OS.linux? && Hardware::CPU.arm?
-      bin.install "glimmervoid"
+      bin.install "glimmervoid", "glimmervoid-fnox"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "glimmervoid"
+      bin.install "glimmervoid", "glimmervoid-fnox"
     end
 
     install_binary_aliases!
