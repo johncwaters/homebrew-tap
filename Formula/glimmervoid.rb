@@ -1,25 +1,25 @@
 class Glimmervoid < Formula
   desc "Supervise terminal coding agents on a shared whiteboard"
   homepage "https://glimmervoid.dev"
-  version "0.62.5"
+  version "0.62.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.5/glimmervoid-aarch64-apple-darwin.tar.xz"
-      sha256 "e590a3456a7e295bcb30bb00fc457ff9ceec4626901a1cdec6584261cb0de8e2"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.6/glimmervoid-aarch64-apple-darwin.tar.xz"
+      sha256 "a28579f9c8d5aba5a0edbac85975ca4e260931b7a93d0d1ef755f38b8e028ac7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.5/glimmervoid-x86_64-apple-darwin.tar.xz"
-      sha256 "becf0beebb6e22a4bd1ed4553b2f719649ec159fed04eeffc6f5c6a87c3ef61d"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.6/glimmervoid-x86_64-apple-darwin.tar.xz"
+      sha256 "ccf934cc70a1459c126581f173c2ff4a014d8c9f485b6c1f956bdc015505588a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.5/glimmervoid-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5520fd166d79753249405f163aeba444e8290fe8c6a00c810c5804319c12096b"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.6/glimmervoid-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8e68127a8ba2f23d7bdb056c16cd3b33acba812738d67fe53b87eac55231ad0a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.5/glimmervoid-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f554453abd8803300d0ef1d735f4bff57f39c63af266bd1db597696237248959"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.6/glimmervoid-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "1d40fb9ac93ab4f32f7a22f428dd4f1d3479ed604e8b76d315aff62a1c3ac466"
     end
   end
   license "MIT"
