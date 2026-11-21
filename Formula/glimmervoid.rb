@@ -1,25 +1,25 @@
 class Glimmervoid < Formula
   desc "Supervise terminal coding agents on a shared whiteboard"
   homepage "https://glimmervoid.dev"
-  version "0.62.10"
+  version "0.62.11"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.10/glimmervoid-aarch64-apple-darwin.tar.xz"
-      sha256 "695ebcad96d2d4962b7b2bd595188ea7673979a9fa0d01b112f9b0f3aad6020c"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.11/glimmervoid-aarch64-apple-darwin.tar.xz"
+      sha256 "babcb28b6dac0a75b927a894049074759ff441bd518066b22c37e1f4b522ff8a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.10/glimmervoid-x86_64-apple-darwin.tar.xz"
-      sha256 "70ff2bc383293c4fa768a8a4be0fc8b73257bb12ba3cf8534027607ba1c6ee5f"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.11/glimmervoid-x86_64-apple-darwin.tar.xz"
+      sha256 "2a3901b915b04755442d30a3890ab799117131fb381baff34a131554634db277"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.10/glimmervoid-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9d2a7f6f78f47a11322782846d7bd68370ee4f69f9c0307294f99dd97364f770"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.11/glimmervoid-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c6a80e02c740a334f34a3663eabbf0cb8b47f54905b68695285e5cde375e6e9d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.10/glimmervoid-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "90018aef2c1c43e36308bb1d36d40bc63c3b33ba7fc9ac241318395d47fb91bf"
+      url "https://github.com/johncwaters/glimmervoid/releases/download/v0.62.11/glimmervoid-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "101ab42e38399e17f4444a8abf95eebacdb2e0bdefecb23bc3a57913e41451ce"
     end
   end
   license "MIT"
